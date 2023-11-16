@@ -15,14 +15,14 @@ setInterval(() => {
         tile.style.width = "12.5%"
         tile.style.height = "12.5%"
         if (Math.floor((i / 8) + i) % 2 === 0) {
-            //let lightness = 100 - (i * 100 / 64);
-            //tile.style.backgroundColor = `hsl(0, 80%, ${lightness}%)`;
-            tile.style.backgroundColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16)
+            let lightness = 100 - (i * 100 / 64);
+            tile.style.backgroundColor = `hsl(0, 80%, ${lightness}%)`;
+            //tile.style.backgroundColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16)
             container.appendChild(tile)
         } else {
-            //let blueness = 100 - (i * 100 / 64);
-            //tile.style.backgroundColor = `hsl(240, 50%, ${blueness}%)`
-            tile.style.backgroundColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16)
+            let blueness = 100 - (i * 100 / 64);
+            tile.style.backgroundColor = `hsl(240, 50%, ${blueness}%)`
+            //tile.style.backgroundColor = '#'+(Math.random()*0xFFFFFF<<0).toString(16)
             container.appendChild(tile)
         }
     }
